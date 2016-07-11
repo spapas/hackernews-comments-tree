@@ -1,0 +1,18 @@
+{
+  "name": "Hackernews Comments Tree",
+  "author": "Serafeim Papastefanos",
+  "version": "0.1",
+  "description": "Converts the comments of a hackernews comment page to a tree-like structure.",
+   "content_scripts": [{
+      "matches": ["https://news.ycombinator.com/*"],
+      "js": ["content.js"]
+  }],
+  "permissions":  [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_title": "Make this hackernews page a tree!"
+  },
+  "web_accessible_resources": ["jquery-1.11.1.min.js", "script.js"],
+  "manifest_version": 2
+}
